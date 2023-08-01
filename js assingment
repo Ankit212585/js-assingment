@@ -1,0 +1,301 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    body {
+        padding-top: 10vh;
+    }
+
+    .maindiv {
+        display: flex;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 15px;
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+
+
+    .imagecard {
+        width: 40%;
+    }
+
+
+
+    .img {
+        width: 100%;
+        margin-top: 50px;
+        overflow: clip;
+
+    }
+
+    div {
+        display: block;
+    }
+
+
+
+    .detailscard {
+        width: 60%;
+        margin-top: 40px;
+        padding-left: 30px;
+    }
+
+
+    .images {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        margin-top: 20px;
+    }
+
+    .img1 {
+        margin: 5px;
+        width: 15%;
+        height: 30%;
+        cursor: pointer;
+        padding: 4px;
+        border-radius: 6px;
+    }
+
+    .active {
+        border: 2px solid #009688;
+    }
+
+
+    .heading1 {
+        font-weight: 300;
+        /* font-size: 44px; */
+        letter-spacing: -2px;
+    }
+
+
+
+    h4 {
+        display: block;
+        margin-block-start: 1.33em;
+        margin-block-end: 1.33em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+    }
+
+    .heading h3 {
+        margin-top: 20px;
+        font-weight: 200;
+        font-size: 20px;
+        letter-spacing: 1px;
+        color: rgb(27, 25, 25);
+
+    }
+
+    .heading h1 {
+        font-weight: 300;
+        font-size: 44px;
+        letter-spacing: -2px;
+    }
+
+    .heading h4 {
+        margin-top: 20px;
+        font-weight: 200;
+        font-size: 20px;
+        letter-spacing: 1px;
+        color: rgb(27, 25, 25);
+    }
+
+    h3 {
+        margin-top: 20px;
+        font-weight: 200;
+        font-size: 20px;
+        letter-spacing: 1px;
+        color: rgb(27, 25, 25);
+    }
+
+    h3 span {
+        color: #009688;
+        font-weight: bold;
+    }
+
+
+    .heading p {
+        margin-top: 20px;
+        font-size: 16px;
+        font-weight: 300;
+        color: #86939e;
+    }
+
+    p {
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+
+    button {
+        word-spacing: normal;
+        line-height: normal;
+        text-transform: none;
+        text-indent: 0px;
+        text-shadow: none;
+        display: inline-block;
+        text-align: center;
+        /* padding: 10px 20px; */
+        padding: 1px 6px;
+        margin-top: 30px;
+    }
+
+
+    .btn:hover {
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    .btn {
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px 20px;
+        letter-spacing: 2px;
+        color: #fff;
+        background-color: #009688;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        background-color: none;
+    }
+
+    @media screen and (max-width: 768px) {
+        .maindiv {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .imagecard {
+            width: 100%;
+        }
+
+        .detailscard {
+            width: 100%;
+            margin-top: 40px;
+            padding-left: 30px;
+        }
+
+        .img {
+            margin-top: 30px;
+        }
+
+        h1 {
+            font-size: 34px;
+        }
+
+        h4 {
+            font-size: 14px;
+        }
+
+        h3 {
+            font-size: 17px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+</style>
+
+<body>
+
+</body>
+<script>
+    //leftside
+    const mainDiv = document.createElement('div');//rootdiv
+    mainDiv.classList.add('maindiv');
+    document.body.appendChild(mainDiv);
+
+    const imageCard = document.createElement('div');//parentdiv left side
+    imageCard.classList.add('imagecard');
+    mainDiv.appendChild(imageCard);
+
+    const card1 = document.createElement('div');
+    card1.classList.add('card1');//giving a classname
+    card1.innerHTML = '<img class="img" src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7579188/2018/11/5/08a7b230-ee8f-46c0-a945-4e835a3c01c01541402833619-United-Colors-of-Benetton-Men-Sweatshirts-1271541402833444-1.jpg" alt="Card Image">';
+    imageCard.appendChild(card1);
+    // right hand side
+    const detailsCard = document.createElement('div');//parent div right side
+    detailsCard.classList.add('detailscard');
+    mainDiv.appendChild(detailsCard);
+
+
+    const heading = document.createElement('div');
+    heading.classList.add('heading');
+    heading.innerHTML = '<h1 class="heading1">Men Navy Blue Solid Sweatshirt</h1><h4>United Colors of Benetton</h4><h3>Price: Rs <span>2599</span></h3><h3>Description</h3><p>Navy solid sweatshirt with patchwork, has a round neck, long sleeves, straight hem</p><h3>Product Preview</h3>';
+    detailsCard.appendChild(heading);
+
+    const images = document.createElement('div');
+    images.classList.add('images');
+    images.innerHTML = '<img class="img1" id="pic1" src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7579188/2018/11/5/08a7b230-ee8f-46c0-a945-4e835a3c01c01541402833619-United-Colors-of-Benetton-Men-Sweatshirts-1271541402833444-1.jpg"><img class="img1" id="pic2"src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7579188/2018/11/5/efc3d5b9-1bb3-4427-af53-7acae7af98951541402833591-United-Colors-of-Benetton-Men-Sweatshirts-1271541402833444-2.jpg"><img class="img1"id="pic3" src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7579188/2018/11/5/c7e58861-3431-4189-9903-9880f5eebd181541402833566-United-Colors-of-Benetton-Men-Sweatshirts-1271541402833444-3.jpg"><img class="img1" id="pic4"src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7579188/2018/11/5/66490b64-32de-44b4-a6e4-fe36f1c040051541402833548-United-Colors-of-Benetton-Men-Sweatshirts-1271541402833444-4.jpg"><img class="img1" id="pic5" src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7579188/2018/11/5/957be784-7c5d-4e90-ab9f-0928015b22891541402833645-United-Colors-of-Benetton-Men-Sweatshirts-1271541402833444-5.jpg">';
+    detailsCard.appendChild(images);
+
+    const button = document.createElement('div');//parent div right side
+    button.classList.add('button');
+    button.innerHTML = '<button class="btn">Add to Cart</button>';
+    detailsCard.appendChild(button);
+
+    const toggle = document.querySelector("#pic1")
+    toggle.addEventListener("click", function () {
+        switchImg("https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7579188/2018/11/5/08a7b230-ee8f-46c0-a945-4e835a3c01c01541402833619-United-Colors-of-Benetton-Men-Sweatshirts-1271541402833444-1.jpg")
+        document.style.border = ('2px solid black')
+    })
+    const toggle2 = document.querySelector("#pic2")
+    toggle2.addEventListener("click", function () {
+        switchImg("https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7579188/2018/11/5/efc3d5b9-1bb3-4427-af53-7acae7af98951541402833591-United-Colors-of-Benetton-Men-Sweatshirts-1271541402833444-2.jpg")
+    })
+    const toggle3 = document.querySelector("#pic3")
+    toggle3.addEventListener("click", function () {
+        switchImg("https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7579188/2018/11/5/c7e58861-3431-4189-9903-9880f5eebd181541402833566-United-Colors-of-Benetton-Men-Sweatshirts-1271541402833444-3.jpg")
+    })
+    const toggle4 = document.querySelector("#pic4")
+    toggle4.addEventListener("click", function () {
+        switchImg("https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7579188/2018/11/5/66490b64-32de-44b4-a6e4-fe36f1c040051541402833548-United-Colors-of-Benetton-Men-Sweatshirts-1271541402833444-4.jpg")
+    })
+    const toggle5 = document.querySelector("#pic5")
+    toggle5.addEventListener("click", function () {
+        switchImg("https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7579188/2018/11/5/957be784-7c5d-4e90-ab9f-0928015b22891541402833645-United-Colors-of-Benetton-Men-Sweatshirts-1271541402833444-5.jpg")
+    })
+
+    function switchImg(source) {
+        document.querySelector(".img").src = source
+    }
+
+
+
+    const border = document.querySelector(".images img")
+    function borderchange(){
+        border.addEventListener("click", (e)=> {
+            e.target=classlist.add("active")
+            // this.classList.add("active").siblings().removeClss("active");
+        })
+    }
+    borderchange()
+
+</script>
+
+</html>
